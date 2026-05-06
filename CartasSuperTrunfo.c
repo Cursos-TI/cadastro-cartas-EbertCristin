@@ -1,10 +1,20 @@
 #include <stdio.h>
 
+// função para calcular  densidade populacional
+float calcularDensidade(float populacao, float area){
+    return (float) populacao / area;
+}
+// função para calcular pib per capita
+float calculaPibPerCcapita(float pib, int populacao){
+    return pib/(float)populacao;
+}
+
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
 // Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
+
 char pais1[20];
 char pais2[20];
 char cidade1[20];
@@ -19,6 +29,12 @@ float pib1;
 float pib2;
 int Pturistico1;
 int Pturistico2;
+float densidade1;
+float densidade2;
+float perCap1;
+float perCap2;
+
+
 // acima fiz a declaração de todas as variaveis que serao necesssarias.
 // a apartir de agora vamos iniciar a logica 
 printf("DIGITE O CODIGO DA PRIMEIRA CARTA :\n");// solicitaçao ao usuario do numero da carta
@@ -49,22 +65,32 @@ printf("DIGITE O PIB DA CIDADE 2:\n");
 scanf("%f",&pib2);
 printf("DIGITE O NUMERO DE PONTOS TURISICOS DA CIDADE 2 :\n ");
 scanf("%d",&Pturistico2);
+// calculo- direto sem verifcar nada
+densidade1=calcularDensidade(populacao1,area1);
+perCap1=calculaPibPerCcapita(pib1,populacao1);
+
+densidade2=calcularDensidade(populacao2,area2);
+perCap2=calculaPibPerCcapita(pib2,populacao2);
 printf("===== CARTA 1 =====\n");
 printf("CODIGO : %s\n",carta1);
 printf( "PAIS : %s\n",pais1);
 printf("CIDADE : %s\n",cidade1);
 printf("POPULAÇÃO : %d MIL habitantes\n",populacao1);
-printf("AREA : %.2f MIL m2\n",area1);
+printf("AREA : %.2f MIL m²\n",area1);
 printf("PIB : %.2f TRILHOES\n",pib1);
 printf("PONTOS TURISTICOS : %d\n",Pturistico1);
-printf("=================================================\n");
+printf("DENSIDADE POPULACIONAL : %2f hab/km²\n", densidade1);
+printf("PIB PER CAPITA : %2fREAIS\n", perCap1);
+printf("=================================================\n"); 
 printf("===== CARTA 2 =====\n");
 printf("CODIGO : %s\n",carta2);
 printf( "PAIS : %s\n",pais2);
 printf("CIDADE : %s\n",cidade2);
 printf("POPULAÇÃO : %d MIL HABITANTES\n",populacao2);
-printf("AREA : %.2f MIL m2\n",area2);
+printf("AREA : %.2f MIL m²\n",area2);
 printf("PIB : %.2f TRILHOES\n",pib2);
+printf("DENSIDADE POPULACIONAL : %2f hab/km²\n", densidade2);
+printf("PIB PER CAPITA : %2fREAIS\n", perCap2);
 
 return 0;
 } 
