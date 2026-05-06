@@ -77,10 +77,10 @@ printf( "PAIS : %s\n",pais1);
 printf("CIDADE : %s\n",cidade1);
 printf("POPULAÇÃO : %d MIL habitantes\n",populacao1);
 printf("AREA : %.2f MIL m²\n",area1);
-printf("PIB : %.2f TRILHOES\n",pib1);
+printf("PIB : %.2f bilhoes\n",pib1);
 printf("PONTOS TURISTICOS : %d\n",Pturistico1);
 printf("DENSIDADE POPULACIONAL : %2f hab/km²\n", densidade1);
-printf("PIB PER CAPITA : %2fREAIS\n", perCap1);
+printf("PIB PER CAPITA : %2f bilhoes de Reais\n", perCap1);
 printf("=================================================\n"); 
 printf("===== CARTA 2 =====\n");
 printf("CODIGO : %s\n",carta2);
@@ -88,9 +88,9 @@ printf( "PAIS : %s\n",pais2);
 printf("CIDADE : %s\n",cidade2);
 printf("POPULAÇÃO : %d MIL HABITANTES\n",populacao2);
 printf("AREA : %.2f MIL m²\n",area2);
-printf("PIB : %.2f TRILHOES\n",pib2);
+printf("PIB : %.2f bilhoes\n",pib2);
 printf("DENSIDADE POPULACIONAL : %2f hab/km²\n", densidade2);
-printf("PIB PER CAPITA : %2fREAIS\n", perCap2);
+printf("PIB PER CAPITA : %2f bilhoes de Reais\n", perCap2);
 
 return 0;
 } 
